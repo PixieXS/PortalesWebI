@@ -1,0 +1,26 @@
+En un documento HTML se sugiere que solo exista un documento H1 a menos que este encerrado
+en otro contenedor.
+
+
+Todos los caracteres de control, espacios no significativos son ignorados por HTML.
+
+Hay 3 tipos de enlaces:
+
+-Enlaces de Tipo Ancla
+-Enlaces Relativos
+-Enlaces Absolutos
+
+
+GIT
+carlo@CSagas MINGW64 /d/Escritorio/UNICAH/Clases 2024/3 TRI/DESARROLLODEPORTALESWEBI
+$ cd IPARCIAL
+
+carlo@CSagas MINGW64 /d/Escritorio/UNICAH/Clases 2024/3 TRI/DESARROLLODEPORTALESWEBI/IPARCIAL
+$ ls
+ Captura.jpg   Contenido.txt  'Infografia Web.jpg'   primerapaginaweb.html   primerapaginaweb.jpg   primero.html
+
+carlo@CSagas MINGW64 /d/Escritorio/UNICAH/Clases 2024/3 TRI/DESARROLLODEPORTALESWEBI/IPARCIAL
+$ git init
+Initialized empty Git repository in D:/Escritorio/UNICAH/Clases 2024/3 TRI/DESARROLLODEPORTALESWEBI/IPARCIAL/.git/
+
+carlo@CSagas MINGW64 /d/Escritorio/UNICAH/Clases 2024/3 TRI/DESARROLLODEPORTALESWEBI/IPARCIAL (master)
