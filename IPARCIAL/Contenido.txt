@@ -1,3 +1,6 @@
+
+CONTENIDO I PARCIAL
+-----------------------------
 En un documento HTML se sugiere que solo exista un documento H1 a menos que este encerrado
 en otro contenedor.
 
