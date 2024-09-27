@@ -3,12 +3,45 @@
 
 <head>
         <title>Multimedia En HTML</title>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<img src="Imagenes/portrait - copia.jpg" alt="Portrait Img">
+        <img src="Imagenes/portrait - copia.jpg" alt="Portrait Img">
+        <br>
+        <hr>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                        d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z" />
+        </svg>
+        <br>
+        <hr>
+
+        <picture>
+                <source srcset="https://picsum.photos/id/4/1200/648" media="(min width:1024px)" />
+                <source srcset="https://picsum.photos/id/4/1024/600" media="(min width:720px)" />
+                <img src="https://picsum.photos/id/4/480/480" alt="Imagen Responsiva">
+        </picture>
+        <hr>
+        <br>
+
+        <video controls>
+                <source srcset="media/sabrina.ogg" type="video/ogg"/>
+                <source src="media/sabrina.mp4" type="video/mp4"/>
+        </video>
+        <hr>
+        <br>
+
+        <audio controls>
+                <source srcset="media/The Emptiness Machine.ogg" type="audio/ogg"/>
+                <source src="media/The Emptiness Machine.mp3" type="audio/mp3"/>
+        </audio>
+        <hr>
+        <br>
+
+        
 
 </body>
 
