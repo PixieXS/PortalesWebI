@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formularios En HTML</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <hr />
+    <form action="forms.html" method="get">
+        <label for="txtNombre">Nombre Completo</label>
+        <input type="text" name="txtName" id="txtNombre" placeholder="Nombre Completo" required />
+        <br />
+        <label for="intEdad">Edad</label>
+        <input type="number" min="1" max="140" name="edad" id="intEdad" placeholder="Edad"></input>
+        <br />
+        <label for="txtEmail">Correo Electronico</label>
+        <input type="email" maxlength="128" name="correo" id="txtEmail" placeholder="Correo Electronico" required>
+        <br />
+        <label>Opciones De Color</label>
+        <input type="radio" id="opcAzul" value="Azul" name="opcColor" />
+        <label for="opcAzul">Azul</label>
+        <input type="radio" id="opcRojo" value="Rojo" name="opcColor" />
+        <label for="opcRojo">Rojo</label>
+        <input type="radio" id="opcVerde" value="Verde" name="opcColor" />
+        <label for="opcVerde">Verde</label>
+        <br />
+        <label for="cmbCiudad">Ciudades</label>
+        <select name="ciudad" id="cmbCiudad">
+            <option value="TEG">Tegucigalpa</option>
+            <option value="SAP">San Pedro Sula</option>
+            <option value="CHL">Choluteca</option>
+            <option value="LCB">La Ceiba</option>
+            <option value="SRC">Santa Rosa De Copan</option>
+            <option value="SIG">Siguatepeque</option>
+            <option value="SIG">Siguatepeque</option>
+            <option value="OLC">Olanchito</option>
+            <option value="JUT">Juticalpa</option>
+            <option value="TRJ">Trujillo</option>
+        </select>
+        <br />
+        <label>Intereses</label>
+        <input type="checkbox" value="1" name="Futbol" id="chkFutbol">
+        <label for="chkFutbol">Futbol</label>
+        <input type="checkbox" value="1" name="Baseball" id="chkBaseball">
+        <label for="chkBaseball">Baseball</label>
+        <input type="checkbox" value="1" name="Basketball" id="chkBasketball">
+        <label for="chkBasketball">Basketball</label>
+        <input type="checkbox" value="1" name="Volleyball" id="chkVolleyball">
+        <label for="chkVolleyball">Volleyball</label>
+        <br />
+        <label for="txtBiografia">Biografia</label>
+        <textarea name="txtBiografia" id="txtBiografia" placeholder="Biografia"></textarea>
+        <br /> <br />
+
+
+        <button type="submit" name="btnEnviar" value="Btn1">Enviar</button>
+        <button type="submit" name="btnRechazar" value="Btn2">Rechazar</button>
+
+
+    </form>
+
+</body>
+
+</html>
