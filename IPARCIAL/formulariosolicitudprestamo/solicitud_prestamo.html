@@ -4,6 +4,7 @@
 <head>
     <title>Solicitud de Préstamos Estudiantiles</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -12,25 +13,25 @@
     <hr>
     <br>
 
-    <form action="#" method="post">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+    <form action="solicitud_prestamo.html" method="get">
+        <label for="txtnombre">Nombre completo:</label>
+        <input type="text" id="txtnombre" name="nombre" placeholder="Nombre Completo" required>
         <br><br>
-        <label for="email">Dirección de correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="txtemail">Dirección de correo electrónico:</label>
+        <input type="email" id="txtemail" name="email" placeholder="Correo Electronico" required>
         <br><br>
-        <label for="telefono">Número de teléfono:</label>
-        <input type="text" id="telefono" name="telefono" required>
+        <label for="txttelefono">Número de teléfono:</label>
+        <input type="text" id="txttelefono" name="telefono" placeholder="Número de teléfono" required>
         <br><br>
-        <label for="direccion">Dirección actual:</label>
-        <input type="text" id="direccion" name="direccion" required>
+        <label for="txtdireccion">Dirección actual:</label>
+        <input type="text" id="txtdireccion" name="direccion" placeholder="Dirección" required>
         <br><br>
-        <label for="ciudad">Ciudad:</label>
-        <input type="text" id="ciudad" name="ciudad" required>
+        <label for="txtciudad">Ciudad:</label>
+        <input type="text" id="txtciudad" name="ciudad" placeholder="Ciudad" required>
         <br><br>
-        <label for="estado">Departamento:</label>
-        <select id="estado" name="estado" required>
-            <option value="">Seleccione un departamento</option>
+        <label for="cmbDepartamento">Departamento:</label>
+        <select id="cmbDepartamento" name="estado" required>
+            <option value="">Seleccione Un Departamento</option>
             <option value="Atlántida">Atlántida</option>
             <option value="Choluteca">Choluteca</option>
             <option value="Colón">Colón</option>
@@ -49,8 +50,8 @@
             <option value="Yoro">Yoro</option>
         </select>
         <br><br>
-        <label for="codigo_postal">Código postal:</label>
-        <input type="text" id="codigo_postal" name="codigo_postal" required>
+        <label for="txtcodigopostal">Código postal:</label>
+        <input type="text" id="txtcodigopostal" name="codigopostal" placeholder="Código postal" required>
         <br><br>
         <label>Nivel de educación actual:</label>
         <input type="radio" id="preparatoria" name="nivel_educacion" value="Preparatoria" required>
@@ -82,11 +83,12 @@
         <input type="radio" id="otro" name="programa_estudio" value="Otro">
         <label for="otro">Otro</label>
         <br><br>
+
         <label for="monto_prestamo">Monto del préstamo solicitado:</label>
-        <input type="text" id="monto_prestamo" name="monto_prestamo" required>
+        <input type="text" id="monto_prestamo" name="monto_prestamo" placeholder="Monto Del Préstamo" required>
         <br><br>
         <label for="razon_prestamo">Razón para solicitar el préstamo:</label>
-        <textarea id="razon_prestamo" name="razon_prestamo" rows="4" required></textarea>
+        <textarea id="razon_prestamo" name="razon_prestamo" placeholder="Razón para solicitar el préstamo"></textarea>
         <br><br>
         <hr>
         <button type="submit">Enviar Solicitud</button>
