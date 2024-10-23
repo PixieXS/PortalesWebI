@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.cargador-atomos {
+    width: 55vmin;
+    height: 55vmin;
+    border-radius: 6px;
+    box-shadow: 1px 2px 10px 0px black;
+    background: white;
+    position: relative;
+}
+
+.nucleo, .orbita, .electron {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.nucleo {
+    width: 6vmin;
+    height: 6vmin;
+    background: radial-gradient(circle at 14px 12px, red, black);
+    box-shadow: 0px 0px 15px black;
+}
+
+.orbita {
+    width: 40vmin;
+    height: 40vmin;
+    border: solid darkgrey;
+    border-radius: 50%; 
+    box-shadow: inset 0 0 5px black; 
+    transform-style: preserve-3d;
+}
+
+.orbita:nth-child(1) {
+    transform: rotateZ(60deg) rotateY(70deg);
+}
+
+.orbita:nth-child(2) {
+    transform: rotateZ(120deg) rotateY(70deg);
+}
+
+.orbita:nth-child(3) {
+    transform: rotateZ(180deg) rotateY(70deg);
+}
+
+.orbita .electron {
+    width: 4vmin;
+    height: 4vmin;
+    background: radial-gradient(circle at 20% 20%, royalblue, midnightblue);
+    animation: movement 4s linear infinite;
+}
+
+@keyframes movement {
+    from {
+        transform: rotateZ(0deg) translateX(20vmin) rotateZ(0deg) rotateY(-70deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX(20vmin) rotateZ(360deg) rotateY(-70deg);
+    }
+}
