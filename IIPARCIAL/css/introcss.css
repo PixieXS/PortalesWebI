@@ -41,8 +41,24 @@ header nav ul li a:hover {
     background-color: #ffffff;
 }
 
+main {
+    background-color: aqua;
+}
 
-main {}
+@media(min-width:720px){ main {
+    background-color: cadetblue;
+}
+}
+
+@media(min-width:1024px){ main {
+    background-color: #c65555;
+}
+}
+
+@media(min-width:1301px){ main {
+    background-color: #6a9b6a;
+}
+}
 
 .active {
     background-color: #ffffff;
