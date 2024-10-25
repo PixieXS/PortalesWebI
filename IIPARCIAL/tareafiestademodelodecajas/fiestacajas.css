@@ -49,20 +49,26 @@ header nav ul li a:hover {
 
       
 .hero {
-    height: 30rem;
-    background-image: url('https://via.placeholder.com/1200x800');
+    height: 90vh;
+    background-image: url('heropanel.png');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    text-shadow: 2px 2px 10px white;
+    color:black;
+    text-shadow: 4px 4px 10px white;
+    font-size: 2rem;
+    width: 500px;
+    background-image: url('textura.png');
+    border: 2px solid white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px
 }
 
 .servicios {
@@ -95,6 +101,22 @@ header nav ul li a:hover {
     font-size: 1rem;
 }
 
+.btn-solicitar {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn-solicitar:hover {
+    background-color: #ff4500;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -102,3 +124,4 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
