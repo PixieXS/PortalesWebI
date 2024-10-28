@@ -1,8 +1,8 @@
-
 * {
     box-sizing: border-box;
 }
 
+/*Trouble TRBL = Top-Right-Bottom-Left  */
 
 body {
     margin: 0px;
@@ -45,19 +45,22 @@ main {
     background-color: aqua;
 }
 
-@media(min-width:720px){ main {
-    background-color: cadetblue;
-}
-}
-
-@media(min-width:1024px){ main {
-    background-color: #c65555;
-}
+@media(min-width:720px) {
+    main {
+        background-color: cadetblue;
+    }
 }
 
-@media(min-width:1301px){ main {
-    background-color: #6a9b6a;
+@media(min-width:1024px) {
+    main {
+        background-color: #c65555;
+    }
 }
+
+@media(min-width:1301px) {
+    main {
+        background-color: #6a9b6a;
+    }
 }
 
 .active {
@@ -75,11 +78,11 @@ main {
 .hero-panel div {
     background-color: #ffffff;
     position: absolute;
-    top: 50%;   
-    left: 50%;   
+    top: 50%;
+    left: 50%;
     font-size: 1rem;
     padding: 1rem;
-    transform: translateX(-50%) translateY(-50%) ;
+    transform: translateX(-50%) translateY(-50%);
     border: 2px solid #000000;
     width: 200px;
     margin: 1rem;
@@ -87,7 +90,8 @@ main {
 }
 
 .hero-panel div h2 {
-    font-size: 1.5rem;  /*1em = 24 Pixeles */
+    font-size: 1.5rem;
+    /*1em = 24 Pixeles */
 }
 
 .hero-panel img {
@@ -98,9 +102,7 @@ main {
 }
 
 .container {
-   max-width: 1024px;
-   margin: 1rem auto;
-   padding: 0.5rem 1rem;
+    max-width: 1024px;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
 }
-
-/*Trouble TRBL = Top-Right-Bottom-Left  */
