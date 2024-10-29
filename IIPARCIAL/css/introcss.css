@@ -1,108 +1,197 @@
+/*Trouble TRBL = Top-Right-Bottom-Left  */
+
+/* Cascada ???? ->  */
 * {
     box-sizing: border-box;
 }
-
-/*Trouble TRBL = Top-Right-Bottom-Left  */
-
 body {
-    margin: 0px;
+    margin : 0px;
     padding: 0px;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0px 3px 5px #333;
 }
 
-header h1 {
-    margin: 0px;
+header h1{
+    margin:0px;
     margin-left: 1rem;
 }
 
-header nav ul {
-    display: flex;
+header nav {
+    width:100%;
+}
+
+header nav ul{
+    display:flex;
+    flex-direction: column;
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding:0px;
+    margin:0px;
 }
 
 header nav ul li a {
-    display: inline-block;
-    color: #ffffff;
+    display:block;
+    color:white;
     text-decoration: none;
-    padding: 0.5rem 0.7rem;
+    padding: 0.75rem 0.8rem;
     transition: background-color 1s ease, color 1s ease;
+    border-bottom: 1px solid #eee;
 }
-
-header nav ul li a:hover {
-    color: #333;
-    background-color: #ffffff;
+header nav ul li a:hover{
+    color:#333;
+    background-color: #fff;
 }
-
+/*
+0-719px mobile
+720 - 1023 tablet
+1024 - 1300 escritorio
+1301 - wide screen
+*/
 main {
     background-color: aqua;
 }
 
-@media(min-width:720px) {
-    main {
-        background-color: cadetblue;
-    }
-}
-
-@media(min-width:1024px) {
-    main {
-        background-color: #c65555;
-    }
-}
-
-@media(min-width:1301px) {
-    main {
-        background-color: #6a9b6a;
-    }
-}
 
 .active {
-    background-color: #ffffff;
-    color: black;
+    background-color: #fff;
+    color:#000;
 }
 
 .hero-panel {
-    position: relative;
+    position:relative;
     width: 100%;
-    overflow: hidden;
     height: 60vh;
+    overflow: hidden;
+}
+
+.hero-panel img{
+    width:100%;
+    height:60vh;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .hero-panel div {
-    background-color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 1rem;
+    background-color: white;
     padding: 1rem;
     transform: translateX(-50%) translateY(-50%);
-    border: 2px solid #000000;
+    border: 2px solid #000;
     width: 200px;
     margin: 1rem;
-    text-align: center;
-}
-
-.hero-panel div h2 {
-    font-size: 1.5rem;
-    /*1em = 24 Pixeles */
-}
-
-.hero-panel img {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    object-position: center center;
 }
 
 .container {
     max-width: 1024px;
     margin: 1rem auto;
-    padding: 0.5rem 1rem;
+    padding:0.5rem 1rem;
+}
+
+.Prices {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding:0.5rem;
+    gap:1rem;
+}
+
+.card {
+    position: relative;
+    border:1px solid #000;
+    max-width: 300px;
+    border-radius: 27px;
+    overflow: hidden;
+}
+
+.card img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center center;
+}
+.card h3 {
+    text-align: center;
+    margin:0px;
+    padding:0.75rem 0.5rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #888;
+}
+.card p {
+    font-size: 0.8rem;
+    text-align: justify;
+    padding: 0.5rem;
+}
+.card a {
+    display: block;
+    text-decoration: none;
+    color:#333;
+    background-color: #6a9b6a;
+    text-align: center;
+    padding:0.7rem 0.5rem;
+    border-radius: 27px;
+    margin: 0.5rem 0.5rem 0.75rem 0.5rem;
+    box-shadow: 3px 3px 7px #000;
+}
+.card .price {
+    position: absolute;
+    right: 1rem;
+    top:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #c65555;
+    color:#000;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1rem #000;
+    transform: translateY(-50%);
+}
+
+@media (min-width:720px) {
+    main {
+        background-color: cadetblue;
+    }
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav {
+        width:auto;
+    }
+    header nav ul{
+        flex-direction: row;
+    }
+    header nav ul li a {
+        display:inline-block;
+        border:none;
+    }
+    .Prices{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width:1024px) {
+    main {
+        background-color: #c65555;
+    }
+}
+
+@media (min-width: 1301px) {
+    main {
+        background-color: #6a9b6a;
+    }
 }
