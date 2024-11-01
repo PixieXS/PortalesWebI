@@ -1,10 +1,26 @@
 /*Trouble TRBL = Top-Right-Bottom-Left  */
 
+/*
+    Existen 3 familias de Tipografia
+    #Conserifas/ Serif : Medios Emisores De Luz
+    #Sinserifas/San Serif : Medio Reflector De Luz
+    #Monoespaciada : Cualquier lugar donde tenga que representar codigo
+
+https://fonts.google.com/*/
+/* 
+    Medio Reflector De Luz: Nuestros Ojos
+    Medios Emisores De Luz: Pantallas
+ */
+
 /* Cascada ???? ->  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
 body {
+    font-family: "Roboto", Arial, sans-serif;
     margin : 0px;
     padding: 0px;
 }
@@ -158,6 +174,123 @@ main {
     transform: translateY(-50%);
 }
 
+
+.grid{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid .row {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid .row [class*=col] {
+    display: flex;
+    border: 1px solid #000;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 1rem;
+
+}
+
+.col-1 {
+    flex-basis: calc(100% / 12);
+} 
+
+.col-2 {
+    flex-basis: calc(100% / 6);
+} 
+
+.col-3 {
+    flex-basis: 25%;
+} 
+
+.col-4 {
+    flex-basis: calc(100% / 3);
+} 
+
+.col-5 {
+    flex-basis: calc(100% / 12 * 5);
+} 
+
+.col-6 {
+    flex-basis: 50%;
+} 
+
+.col-7 {
+    flex-basis: calc(100% / 12 * 7);
+} 
+
+.col-8 {
+    flex-basis: calc(100% / 12 * 8);
+} 
+
+.col-9 {
+    flex-basis: calc(100% / 12 * 9);
+} 
+
+.col-10 {
+    flex-basis: calc(100% / 12 * 10);
+} 
+
+.col-11 {
+    flex-basis: calc(100% / 12 * 11);
+} 
+
+.col-12 {
+    flex-basis: 100%;
+}
+
+
+.offset-1 {
+    margin-left: calc(100% / 12);
+} 
+
+.offset-2 {
+    margin-left: calc(100% / 6);
+} 
+
+.offset-3 {
+    margin-left: 25%;
+} 
+
+.offset-4 {
+    margin-left: calc(100% / 3);
+} 
+
+.offset-5 {
+    margin-left: calc(100% / 12 * 5);
+} 
+
+.offset-6 {
+    margin-left: 50%;
+} 
+
+.offset-7 {
+    margin-left: calc(100% / 12 * 7);
+} 
+
+.offset-8 {
+    margin-left: calc(100% / 12 * 8);
+} 
+
+.offset-9 {
+    margin-left: calc(100% / 12 * 9);
+} 
+
+.offset-10 {
+    margin-left: calc(100% / 12 * 10);
+} 
+
+.offset-11 {
+    margin-left: calc(100% / 12 * 11);
+} 
+
+
+
 @media (min-width:720px) {
     main {
         background-color: cadetblue;
@@ -182,12 +315,207 @@ main {
         justify-content: center;
         align-items: center;
     }
+
+    .col-m-1 {
+        flex-basis: calc(100% / 12);
+    } 
+    
+    .col-m-2 {
+        flex-basis: calc(100% / 6);
+    } 
+    
+    .col-m-3 {
+        flex-basis: 25%;
+    } 
+    
+    .col-m-4 {
+        flex-basis: calc(100% / 3);
+    } 
+    
+    .col-m-5 {
+        flex-basis: calc(100% / 12 * 5);
+    } 
+    
+    .col-m-6 {
+        flex-basis: 50%;
+    } 
+    
+    .col-m-7 {
+        flex-basis: calc(100% / 12 * 7);
+    } 
+    
+    .col-m-8 {
+        flex-basis: calc(100% / 12 * 8);
+    } 
+    
+    .col-m-9 {
+        flex-basis: calc(100% / 12 * 9);
+    } 
+    
+    .col-m-10 {
+        flex-basis: calc(100% / 12 * 10);
+    } 
+    
+    .col-m-11 {
+        flex-basis: calc(100% / 12 * 11);
+    } 
+    
+    .col-m-12 {
+        flex-basis: 100%;
+    }
+
+    .offset-m-1 {
+        margin-left: calc(100% / 12);
+    } 
+    
+    .offset-m-2 {
+        margin-left: calc(100% / 6);
+    } 
+    
+    .offset-m-3 {
+        margin-left: 25%;
+    } 
+    
+    .offset-m-4 {
+        margin-left: calc(100% / 3);
+    } 
+    
+    .offset-m-5 {
+        margin-left: calc(100% / 12 * 5);
+    } 
+    
+    .offset-m-6 {
+        margin-left: 50%;
+    } 
+    
+    .offset-m-7 {
+        margin-left: calc(100% / 12 * 7);
+    } 
+    
+    .offset-m-8 {
+        margin-left: calc(100% / 12 * 8);
+    } 
+    
+    .offset-m-9 {
+        margin-left: calc(100% / 12 * 9);
+    } 
+    
+    .offset-m-10 {
+        margin-left: calc(100% / 12 * 10);
+    } 
+    
+    .offset-m-11 {
+        margin-left: calc(100% / 12 * 11);
+    } 
+
+    .offset-m-0
+    {
+        margin-left: 0px;
+    } 
+
 }
 
 @media (min-width:1024px) {
     main {
         background-color: #c65555;
     }
+
+    .col-l-1 {
+        flex-basis: calc(100% / 12);
+    } 
+    
+    .col-l-2 {
+        flex-basis: calc(100% / 6);
+    } 
+    
+    .col-l-3 {
+        flex-basis: 25%;
+    } 
+    
+    .col-l-4 {
+        flex-basis: calc(100% / 3);
+    } 
+    
+    .col-l-5 {
+        flex-basis: calc(100% / 12 * 5);
+    } 
+    
+    .col-l-6 {
+        flex-basis: 50%;
+    } 
+    
+    .col-l-7 {
+        flex-basis: calc(100% / 12 * 7);
+    } 
+    
+    .col-l-8 {
+        flex-basis: calc(100% / 12 * 8);
+    } 
+    
+    .col-l-9 {
+        flex-basis: calc(100% / 12 * 9);
+    } 
+    
+    .col-l-10 {
+        flex-basis: calc(100% / 12 * 10);
+    } 
+    
+    .col-l-11 {
+        flex-basis: calc(100% / 12 * 11);
+    } 
+    
+    .col-l-12 {
+        flex-basis: 100%;
+    }
+
+    .offset-l-1 {
+        margin-left: calc(100% / 12);
+    } 
+    
+    .offset-l-2 {
+        margin-left: calc(100% / 6);
+    } 
+    
+    .offset-l-3 {
+        margin-left: 25%;
+    } 
+    
+    .offset-l-4 {
+        margin-left: calc(100% / 3);
+    } 
+    
+    .offset-l-5 {
+        margin-left: calc(100% / 12 * 5);
+    } 
+    
+    .offset-l-6 {
+        margin-left: 50%;
+    } 
+    
+    .offset-l-7 {
+        margin-left: calc(100% / 12 * 7);
+    } 
+    
+    .offset-l-8 {
+        margin-left: calc(100% / 12 * 8);
+    } 
+    
+    .offset-l-9 {
+        margin-left: calc(100% / 12 * 9);
+    } 
+    
+    .offset-l-10 {
+        margin-left: calc(100% / 12 * 10);
+    } 
+    
+    .offset-l-11 {
+        margin-left: calc(100% / 12 * 11);
+    } 
+
+    .offset-m-0
+    {
+        margin-left: 0px;
+    } 
 }
 
 @media (min-width: 1301px) {
