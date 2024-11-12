@@ -19,9 +19,10 @@ https://fonts.google.com/*/
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: "Roboto", Arial, sans-serif;
-    margin : 0px;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -33,35 +34,37 @@ header {
     box-shadow: 0px 3px 5px #333;
 }
 
-header h1{
-    margin:0px;
+header h1 {
+    margin: 0px;
     margin-left: 1rem;
 }
 
 header nav {
-    width:100%;
+    width: 100%;
 }
 
-header nav ul{
-    display:flex;
+header nav ul {
+    display: flex;
     flex-direction: column;
     list-style: none;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 header nav ul li a {
-    display:block;
-    color:white;
+    display: block;
+    color: white;
     text-decoration: none;
     padding: 0.75rem 0.8rem;
     transition: background-color 1s ease, color 1s ease;
     border-bottom: 1px solid #eee;
 }
-header nav ul li a:hover{
-    color:#333;
+
+header nav ul li a:hover {
+    color: #333;
     background-color: #fff;
 }
+
 /*
 0-719px mobile
 720 - 1023 tablet
@@ -75,19 +78,19 @@ main {
 
 .active {
     background-color: #fff;
-    color:#000;
+    color: #000;
 }
 
 .hero-panel {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 60vh;
     overflow: hidden;
 }
 
-.hero-panel img{
-    width:100%;
-    height:60vh;
+.hero-panel img {
+    width: 100%;
+    height: 60vh;
     object-fit: cover;
     object-position: center center;
 }
@@ -107,66 +110,70 @@ main {
 .container {
     max-width: 1024px;
     margin: 1rem auto;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .Prices {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    padding:0.5rem;
-    gap:1rem;
+    padding: 0.5rem;
+    gap: 1rem;
 }
 
 .card {
     position: relative;
-    border:1px solid #000;
+    border: 1px solid #000;
     max-width: 300px;
     border-radius: 27px;
     overflow: hidden;
 }
 
 .card img {
-    width:100%;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     object-position: center center;
 }
+
 .card h3 {
     text-align: center;
-    margin:0px;
-    padding:0.75rem 0.5rem;
+    margin: 0px;
+    padding: 0.75rem 0.5rem;
     font-size: 1.1rem;
     border-bottom: 1px solid #888;
 }
+
 .card p {
     font-size: 0.8rem;
     text-align: justify;
     padding: 0.5rem;
 }
+
 .card a {
     display: block;
     text-decoration: none;
-    color:#333;
+    color: #333;
     background-color: #6a9b6a;
     text-align: center;
-    padding:0.7rem 0.5rem;
+    padding: 0.7rem 0.5rem;
     border-radius: 27px;
     margin: 0.5rem 0.5rem 0.75rem 0.5rem;
     box-shadow: 3px 3px 7px #000;
 }
+
 .card .price {
     position: absolute;
     right: 1rem;
-    top:200px;
-    display:flex;
+    top: 200px;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
     font-weight: bold;
     background-color: #c65555;
-    color:#000;
+    color: #000;
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -175,7 +182,7 @@ main {
 }
 
 
-.grid{
+.grid {
     display: flex;
     flex-direction: column;
 }
@@ -198,47 +205,47 @@ main {
 
 .col-1 {
     flex-basis: calc(100% / 12);
-} 
+}
 
 .col-2 {
     flex-basis: calc(100% / 6);
-} 
+}
 
 .col-3 {
     flex-basis: 25%;
-} 
+}
 
 .col-4 {
     flex-basis: calc(100% / 3);
-} 
+}
 
 .col-5 {
     flex-basis: calc(100% / 12 * 5);
-} 
+}
 
 .col-6 {
     flex-basis: 50%;
-} 
+}
 
 .col-7 {
     flex-basis: calc(100% / 12 * 7);
-} 
+}
 
 .col-8 {
     flex-basis: calc(100% / 12 * 8);
-} 
+}
 
 .col-9 {
     flex-basis: calc(100% / 12 * 9);
-} 
+}
 
 .col-10 {
     flex-basis: calc(100% / 12 * 10);
-} 
+}
 
 .col-11 {
     flex-basis: calc(100% / 12 * 11);
-} 
+}
 
 .col-12 {
     flex-basis: 100%;
@@ -247,47 +254,47 @@ main {
 
 .offset-1 {
     margin-left: calc(100% / 12);
-} 
+}
 
 .offset-2 {
     margin-left: calc(100% / 6);
-} 
+}
 
 .offset-3 {
     margin-left: 25%;
-} 
+}
 
 .offset-4 {
     margin-left: calc(100% / 3);
-} 
+}
 
 .offset-5 {
     margin-left: calc(100% / 12 * 5);
-} 
+}
 
 .offset-6 {
     margin-left: 50%;
-} 
+}
 
 .offset-7 {
     margin-left: calc(100% / 12 * 7);
-} 
+}
 
 .offset-8 {
     margin-left: calc(100% / 12 * 8);
-} 
+}
 
 .offset-9 {
     margin-left: calc(100% / 12 * 9);
-} 
+}
 
 .offset-10 {
     margin-left: calc(100% / 12 * 10);
-} 
+}
 
 .offset-11 {
     margin-left: calc(100% / 12 * 11);
-} 
+}
 
 
 
@@ -295,21 +302,26 @@ main {
     main {
         background-color: cadetblue;
     }
+
     header {
         flex-direction: row;
         justify-content: space-between;
     }
+
     header nav {
-        width:auto;
+        width: auto;
     }
-    header nav ul{
+
+    header nav ul {
         flex-direction: row;
     }
+
     header nav ul li a {
-        display:inline-block;
-        border:none;
+        display: inline-block;
+        border: none;
     }
-    .Prices{
+
+    .Prices {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -318,100 +330,99 @@ main {
 
     .col-m-1 {
         flex-basis: calc(100% / 12);
-    } 
-    
+    }
+
     .col-m-2 {
         flex-basis: calc(100% / 6);
-    } 
-    
+    }
+
     .col-m-3 {
         flex-basis: 25%;
-    } 
-    
+    }
+
     .col-m-4 {
         flex-basis: calc(100% / 3);
-    } 
-    
+    }
+
     .col-m-5 {
         flex-basis: calc(100% / 12 * 5);
-    } 
-    
+    }
+
     .col-m-6 {
         flex-basis: 50%;
-    } 
-    
+    }
+
     .col-m-7 {
         flex-basis: calc(100% / 12 * 7);
-    } 
-    
+    }
+
     .col-m-8 {
         flex-basis: calc(100% / 12 * 8);
-    } 
-    
+    }
+
     .col-m-9 {
         flex-basis: calc(100% / 12 * 9);
-    } 
-    
+    }
+
     .col-m-10 {
         flex-basis: calc(100% / 12 * 10);
-    } 
-    
+    }
+
     .col-m-11 {
         flex-basis: calc(100% / 12 * 11);
-    } 
-    
+    }
+
     .col-m-12 {
         flex-basis: 100%;
     }
 
     .offset-m-1 {
         margin-left: calc(100% / 12);
-    } 
-    
+    }
+
     .offset-m-2 {
         margin-left: calc(100% / 6);
-    } 
-    
+    }
+
     .offset-m-3 {
         margin-left: 25%;
-    } 
-    
+    }
+
     .offset-m-4 {
         margin-left: calc(100% / 3);
-    } 
-    
+    }
+
     .offset-m-5 {
         margin-left: calc(100% / 12 * 5);
-    } 
-    
+    }
+
     .offset-m-6 {
         margin-left: 50%;
-    } 
-    
+    }
+
     .offset-m-7 {
         margin-left: calc(100% / 12 * 7);
-    } 
-    
+    }
+
     .offset-m-8 {
         margin-left: calc(100% / 12 * 8);
-    } 
-    
+    }
+
     .offset-m-9 {
         margin-left: calc(100% / 12 * 9);
-    } 
-    
+    }
+
     .offset-m-10 {
         margin-left: calc(100% / 12 * 10);
-    } 
-    
+    }
+
     .offset-m-11 {
         margin-left: calc(100% / 12 * 11);
-    } 
+    }
 
-    .offset-m-0
-    {
+    .offset-m-0 {
         margin-left: 0px;
-    } 
+    }
 
 }
 
@@ -422,104 +433,178 @@ main {
 
     .col-l-1 {
         flex-basis: calc(100% / 12);
-    } 
-    
+    }
+
     .col-l-2 {
         flex-basis: calc(100% / 6);
-    } 
-    
+    }
+
     .col-l-3 {
         flex-basis: 25%;
-    } 
-    
+    }
+
     .col-l-4 {
         flex-basis: calc(100% / 3);
-    } 
-    
+    }
+
     .col-l-5 {
         flex-basis: calc(100% / 12 * 5);
-    } 
-    
+    }
+
     .col-l-6 {
         flex-basis: 50%;
-    } 
-    
+    }
+
     .col-l-7 {
         flex-basis: calc(100% / 12 * 7);
-    } 
-    
+    }
+
     .col-l-8 {
         flex-basis: calc(100% / 12 * 8);
-    } 
-    
+    }
+
     .col-l-9 {
         flex-basis: calc(100% / 12 * 9);
-    } 
-    
+    }
+
     .col-l-10 {
         flex-basis: calc(100% / 12 * 10);
-    } 
-    
+    }
+
     .col-l-11 {
         flex-basis: calc(100% / 12 * 11);
-    } 
-    
+    }
+
     .col-l-12 {
         flex-basis: 100%;
     }
 
     .offset-l-1 {
         margin-left: calc(100% / 12);
-    } 
-    
+    }
+
     .offset-l-2 {
         margin-left: calc(100% / 6);
-    } 
-    
+    }
+
     .offset-l-3 {
         margin-left: 25%;
-    } 
-    
+    }
+
     .offset-l-4 {
         margin-left: calc(100% / 3);
-    } 
-    
+    }
+
     .offset-l-5 {
         margin-left: calc(100% / 12 * 5);
-    } 
-    
+    }
+
     .offset-l-6 {
         margin-left: 50%;
-    } 
-    
+    }
+
     .offset-l-7 {
         margin-left: calc(100% / 12 * 7);
-    } 
-    
+    }
+
     .offset-l-8 {
         margin-left: calc(100% / 12 * 8);
-    } 
-    
+    }
+
     .offset-l-9 {
         margin-left: calc(100% / 12 * 9);
-    } 
-    
+    }
+
     .offset-l-10 {
         margin-left: calc(100% / 12 * 10);
-    } 
-    
+    }
+
     .offset-l-11 {
         margin-left: calc(100% / 12 * 11);
-    } 
+    }
 
-    .offset-m-0
-    {
+    .offset-m-0 {
         margin-left: 0px;
-    } 
+    }
 }
 
 @media (min-width: 1301px) {
     main {
         background-color: #6a9b6a;
+    }
+}
+
+
+.process-fullscreen {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.process {
+    width: 72px;
+    height: 72px;
+    border: 7px solid red;
+    border-radius: 50%;
+    border-bottom: greenyellow 7px dotted;
+    animation: process-run 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bounce {
+    width: 16px;
+    height: 16px;
+    background-color: chocolate;
+    border-radius: 50%;
+    transform: translateY(-400%);
+    animation: bounce-run .5s linear infinite;
+}
+
+.bounce:nth-child(2) {
+    animation-delay: 0.1s;
+    animation-direction: reverse;
+}
+
+
+@keyframes process-run {
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce-run {
+
+    0% {
+        transform: rotate(-400%);
+    }
+
+    50% {
+        transform: rotate(0%);
+    }
+
+    100% {
+        transform: rotate(-400%);
     }
 }
