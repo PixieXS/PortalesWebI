@@ -563,7 +563,7 @@ main {
 .bounce {
     width: 16px;
     height: 16px;
-    background-color: chocolate;
+    background-color: yellow;
     border-radius: 50%;
     transform: translateY(-400%);
     animation: bounce-run .5s linear infinite;
@@ -595,16 +595,13 @@ main {
 }
 
 @keyframes bounce-run {
-
     0% {
-        transform: rotate(-400%);
+        transform: translateY(-400%);
     }
-
     50% {
-        transform: rotate(0%);
+        transform: translateY(400%);
     }
-
     100% {
-        transform: rotate(-400%);
+        transform: translateY(-400%);
     }
 }
