@@ -126,4 +126,52 @@ function onPageLoaded() {
     );
 
     console.log("CSV Serialized:", arrColoresText.join(","));
+
+
+    //JSON ------> Javascript Object Notation   json.org
+
+
+    let objPersona = {
+        "Nombre": "Carlos Eduardo Sagastume Arteaga",
+        "Telefono": "96246825",
+        "Email": "carlossagastume08@gmail.com",
+        "Idin": "0501200002843",
+
+    };
+
+    console.log("Nombre En El Objecto:", objPersona.Nombre);
+    console.log("Telefono En El Objecto:", objPersona.Telefono);
+    console.log("Email En El Objecto:", objPersona.Email);
+    console.log("Idin En El Objecto:", objPersona.Idin);
+
+
+
+    let arrPersonas = [
+        {
+            "nombre": "Orlando J Betancourth",
+            "telefono": "00000000",
+            "email": "obetancourthunichah@gmail.com",
+            "idin": "0801198412349"
+        },
+        {
+            "nombre": "Camilo Betancourth",
+            "telefono": "00000000",
+            "email": "cbetancourthunichah@gmail.com",
+            "idin": "08011986012934"
+        },
+        {
+            "nombre": "Adriana Betancourth",
+            "telefono": "00000000",
+            "email": "abetancourthunichah@gmail.com",
+            "idin": "0801198900132"
+        }
+    ];
+
+    arrPersonas.forEach(
+        function (persona) {
+            console.log("Registro:", objPersona.Idin);
+        }
+    )
+
+
 }
