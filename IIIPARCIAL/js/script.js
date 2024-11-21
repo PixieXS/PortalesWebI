@@ -173,5 +173,5 @@ function onPageLoaded() {
         }
     )
 
-
+    const mySlider = new SliderController();
 }
