@@ -473,6 +473,19 @@ const demoPlanEstudio = [
                 "orden": 0,
             }
         ]
+    },
+
+    {
+        "id": 14,
+        "bloque": "XIV",
+        "asignaturas": [
+            {
+                "id": "IF395",
+                "nombre": "INVESTIGACIÓN TECNOLÓGICA",
+                "creditos": "",
+                "orden": 0,
+            }
+        ]
     }
 ];
 
