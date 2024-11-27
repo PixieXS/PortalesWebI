@@ -4,32 +4,32 @@ const demoPlanEstudio = [
         "bloque": "I",
         "asignaturas": [
             {
-                "id": "CSL1-FI101",
-                "nombre": "FILOSOFÍA",
-                "creditos": 5,
+                "id": "ES101",
+                "nombre": "ESPAÑOL",
+                "creditos": 3,
                 "orden": 0,
             },
             {
-                "id": "mt301",
-                "nombre": "Física I",
-                "creditos": 5,
+                "id": "MT101",
+                "nombre": "MATEMATICAS",
+                "creditos": 4,
                 "orden": 1,
             },
             {
-                "id": 'qm101',
-                "nombre": "Química I",
+                "id": 'IF112',
+                "nombre": "INTRODUCCIÓN A LAS CIENCIAS DE LA COMPUTACIÓN ",
                 "creditos": 3,
                 "orden": 2,
             },
             {
-                "id": 'es101',
-                "nombre": "Español",
+                "id": 'SC101',
+                "nombre": "SOCIOLOGÍA",
                 "creditos": 3,
                 "orden": 3
             },
             {
-                "id": 'if101',
-                "nombre": "Introducción a Ciencias de la Computación",
+                "id": 'FI101',
+                "nombre": "FILOSOFÍA",
                 "creditos": 3,
                 "orden": 4
             },
@@ -40,77 +40,438 @@ const demoPlanEstudio = [
         "bloque": "II",
         "asignaturas": [
             {
-                "id": "mt102",
-                "nombre": "Precálculo",
-                "creditos": 5,
+                "id": "ES201",
+                "nombre": "EXPRESIÓN ORAL Y ESCRITA",
+                "creditos": 3,
                 "orden": 0,
-                "requisitos": ['mt101']
+                "requisitos": ['ES101']
             },
             {
-                "id": "fi101",
-                "nombre": "Filosofía",
-                "creditos": 3,
+                "id": "MT201",
+                "nombre": "PRE CALCULO",
+                "creditos": 4,
                 "orden": 1,
+                "requisitos": ['MT101']
             },
             {
-                "id": 'ad101',
-                "nombre": "Administración I",
-                "creditos": 3,
+                "id": 'IF200',
+                "nombre": "FUNDAMENTOS Y LÓGICA DE PROGRAMACIÓN",
+                "creditos": 4,
                 "orden": 2,
+                "requisitos": ['IF112']
             },
             {
-                "id": 'es102',
-                "nombre": "Expresión Oral y Escríta",
+                "id": 'HS101',
+                "nombre": "HISTORIA DE HONDURAS",
                 "creditos": 3,
                 "orden": 3,
-                "requisitos": ['es101']
             },
             {
-                "id": 'if102',
-                "nombre": "Fundamento y Lógica de la Programación",
+                "id": 'CR201',
+                "nombre": "EL HOMBRE FRENTE A LA VIDA",
                 "creditos": 3,
                 "orden": 4,
-                "requisitos": ['if101']
+                "requisitos": ['FI101']
             },
         ]
     },
     {
-        "id": 2,
-        "bloque": "II",
+        "id": 3,
+        "bloque": "III",
         "asignaturas": [
             {
-                "id": "mt102",
-                "nombre": "Precálculo",
-                "creditos": 5,
+                "id": "MT202",
+                "nombre": "ESTADÍSTICA I",
+                "creditos": 4,
                 "orden": 0,
-                "requisitos": ['mt101']
+                "requisitos": ['MT101']
             },
             {
-                "id": "fi101",
-                "nombre": "Filosofía",
+                "id": "MT201",
+                "nombre": "CALCULO I",
+                "creditos": 4,
+                "orden": 1,
+                "requisitos": ['MT101']
+            },
+            {
+                "id": 'IF214',
+                "nombre": "PROGRAMACIÓN ESTRUCTURADA I",
+                "creditos": 3,
+                "orden": 2,
+                "requisitos": ['IF200']
+            },
+            {
+                "id": 'IF213',
+                "nombre": "ESTRUCTURAS DISCRETAS",
+                "creditos": 3,
+                "orden": 3,
+                "requisitos": ['IF200']
+            }
+        ]
+    },
+
+    {
+        "id": 4,
+        "bloque": "IV",
+        "asignaturas": [
+            {
+                "id": "AD302",
+                "nombre": "MÉTODOS Y TÉCNICAS DE INVESTIGACIÓN",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['MT202']
+            },
+            {
+                "id": "MT401",
+                "nombre": "CALCULO II",
+                "creditos": 4,
+                "orden": 1,
+                "requisitos": ['MT303']
+            },
+            {
+                "id": 'IF303',
+                "nombre": "PROGRAMACIÓN ESTRUCTURADA II",
+                "creditos": 3,
+                "orden": 2,
+                "requisitos": ['IF214']
+            },
+            {
+                "id": 'FS201',
+                "nombre": "FÍSICA I",
+                "creditos": 3,
+                "orden": 3,
+                "requisitos": ['MT101']
+            },
+            {
+                "id": 'CR201',
+                "nombre": "ADMINISTRACIÓN",
+                "creditos": 3,
+                "orden": 4,
+            },
+        ]
+    },
+
+    {
+        "id": 5,
+        "bloque": "V",
+        "asignaturas": [
+            {
+                "id": "IF322",
+                "nombre": "BASES DE DATOS I",
+                "creditos": 3,
+                "orden": 0,
+            },
+            {
+                "id": "CT201",
+                "nombre": "CONTABILIDAD",
                 "creditos": 3,
                 "orden": 1,
             },
             {
-                "id": 'ad101',
-                "nombre": "Administración I",
+                "id": 'IF325',
+                "nombre": "PROGRAMACIÓN EN ENTORNOS DE DESARROLLO VISUAL",
+                "creditos": 3,
+                "orden": 2,
+                "requisitos": ['IF303']
+            },
+            {
+                "id": 'IF319',
+                "nombre": "PRINCIPIOS DE ELETRÓNICA",
+                "creditos": 3,
+                "orden": 3,
+                "requisitos": ['FS201']
+            },
+            {
+                "id": 'MT204',
+                "nombre": "MATEMÁTICAS FINANCIERA",
+                "creditos": 3,
+                "orden": 4,
+                "requisitos": ['MT101']
+            },
+        ]
+    },
+
+    {
+        "id": 6,
+        "bloque": "VI",
+        "asignaturas": [
+            {
+                "id": "IF327",
+                "nombre": "BASES DE DATOS II",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF322']
+            },
+            {
+                "id": "FI501",
+                "nombre": "ÉTICA PROFESIONAL",
+                "creditos": 3,
+                "orden": 1,
+                "requisitos": ['CR201']
+            },
+            {
+                "id": 'IF212',
+                "nombre": "ANÁLISIS Y DISEÑO DE SISTEMAS",
+                "creditos": 4,
+                "orden": 2,
+            },
+            {
+                "id": 'IF323',
+                "nombre": "REDES I",
+                "creditos": 4,
+                "orden": 3,
+            },
+            {
+                "id": 'IF324',
+                "nombre": "CIRCUITOS LÓGICOS",
+                "creditos": 3,
+                "orden": 4,
+                "requisitos": ['IF319']
+            },
+        ]
+    },
+
+    {
+        "id": 7,
+        "bloque": "VII",
+        "asignaturas": [
+            {
+                "id": "IF342",
+                "nombre": "BASES DE DATOS MULTIDIMENSIONAL",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF327']
+            },
+            {
+                "id": "IF340",
+                "nombre": "PROGRAMACIÓN MULTIPLATAFORMA ",
+                "creditos": 3,
+                "orden": 1,
+            },
+            {
+                "id": 'IF314',
+                "nombre": "DESARROLLO DE SOFTWARE ",
+                "creditos": 4,
+                "orden": 2,
+                "requisitos": ['IF212']
+            },
+            {
+                "id": 'IF328',
+                "nombre": "REDES II",
+                "creditos": 4,
+                "orden": 3,
+                "requisitos": ['IF323']
+            },
+            {
+                "id": 'IF329',
+                "nombre": "SISTEMAS AUTOMATIZADOS",
+                "creditos": 3,
+                "orden": 4,
+                "requisitos": ['IF324']
+            },
+        ]
+    },
+
+    {
+        "id": 8,
+        "bloque": "VIII",
+        "asignaturas": [
+            {
+                "id": "IF391",
+                "nombre": "SISTEMAS INTELIGENTES PARA NEGOCIOS",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF342']
+            },
+            {
+                "id": "IF346",
+                "nombre": "IMPLEMENTACIÓN DE SISTEMAS DE SOFTWARE",
+                "creditos": 3,
+                "orden": 1,
+                "requisitos": ['IF314']
+            },
+            {
+                "id": 'IF345',
+                "nombre": "SISTEMAS OPERATIVOS I",
                 "creditos": 3,
                 "orden": 2,
             },
             {
-                "id": 'es102',
-                "nombre": "Expresión Oral y Escríta",
+                "id": 'IF370',
+                "nombre": "MICROCONTROLADORES",
                 "creditos": 3,
                 "orden": 3,
-                "requisitos": ['es101']
+            }
+        ]
+    },
+
+    {
+        "id": 9,
+        "bloque": "IX",
+        "asignaturas": [
+            {
+                "id": "IF353",
+                "nombre": "DESARROLLO DE PORTALES WEB I",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF340']
             },
             {
-                "id": 'if102',
-                "nombre": "Fundamento y Lógica de la Programación",
+                "id": "IF351",
+                "nombre": "PROGRAMACIÓN MOVIL I",
+                "creditos": 3,
+                "orden": 1,
+            },
+            {
+                "id": 'AD104',
+                "nombre": "GESTIÓN DE LA CALIDAD TOTAL",
+                "creditos": 3,
+                "orden": 2,
+            },
+            {
+                "id": 'IF352',
+                "nombre": "SISTEMAS OPERATIVOS II ",
+                "creditos": 3,
+                "orden": 3,
+                "requisitos": ['IF323']
+            },
+            {
+                "id": 'IF381',
+                "nombre": "SEMINARIO DE HARDWARE Y ELECTRICIDAD ",
                 "creditos": 3,
                 "orden": 4,
-                "requisitos": ['if101']
+                "requisitos": ['IF370']
             },
+        ]
+    },
+
+    {
+        "id": 10,
+        "bloque": "X",
+        "asignaturas": [
+            {
+                "id": "IF357",
+                "nombre": "DESARROLLO DE PORTALES WEB II",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF353']
+            },
+            {
+                "id": "IF355",
+                "nombre": "PROGRAMACIÓN MOVIL II",
+                "creditos": 3,
+                "orden": 1,
+                "requisitos": ['IF351']
+            },
+            {
+                "id": 'MT304',
+                "nombre": "CONTROL ESTADÍSTICO DE LA CALIDAD",
+                "creditos": 3,
+                "orden": 2,
+                "requisitos": ['AD104']
+            },
+            {
+                "id": 'IF356',
+                "nombre": "GESTIÓN Y ESTANDARES DE TECNOLOGÍA DE INFORMACIÓN",
+                "creditos": 3,
+                "orden": 3,
+            },
+            {
+                "id": 'CR501',
+                "nombre": "DOCTRINA SOCIAL DE LA IGLESIA",
+                "creditos": 3,
+                "orden": 4,
+                "requisitos": ['FI501']
+            },
+        ]
+    },
+
+    {
+        "id": 11,
+        "bloque": "XI",
+        "asignaturas": [
+            {
+                "id": "IF362",
+                "nombre": "NEGOCIOS WEB",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF357']
+            },
+            {
+                "id": "IF347",
+                "nombre": "PROGRAMACIÓN DE NEGOCIOS",
+                "creditos": 3,
+                "orden": 1,
+            },
+            {
+                "id": 'AD402',
+                "nombre": "PLANEACIÓN Y DISEÑO DE UN MODELO DE CALIDAD",
+                "creditos": 3,
+                "orden": 2,
+                "requisitos": ['MT304']
+            },
+            {
+                "id": 'IF360',
+                "nombre": "SEGURIDAD INFORMÁTICA Y GESTIÓN DE RIESGO",
+                "creditos": 3,
+                "orden": 3,
+                "requisitos": ['IF356']
+            },
+            {
+                "id": 'IF358',
+                "nombre": "ADMINISTRACIÓN DE CENTROS DE COMPUTO",
+                "creditos": 3,
+                "orden": 4,
+                "requisitos": ['IF356']
+            },
+        ]
+    },
+
+    {
+        "id": 12,
+        "bloque": "XII",
+        "asignaturas": [
+            {
+                "id": "IF361",
+                "nombre": "SEMINARIO-TALLER DE SOFTWARE",
+                "creditos": 3,
+                "orden": 0,
+                "requisitos": ['IF362']
+            },
+            {
+                "id": "IF392",
+                "nombre": "GESTIÓN DE PROYECTOS INFORMÁTICOS",
+                "creditos": 3,
+                "orden": 1,
+                "requisitos": ['IF347']
+            },
+            {
+                "id": 'IF350',
+                "nombre": "BIG DATA",
+                "creditos": 4,
+                "orden": 2,
+                "requisitos": ['IF391']
+            },
+            {
+                "id": 'IF380',
+                "nombre": "AUDITORÍA DE SISTEMAS DE INFORMACIÓN ",
+                "creditos": 4,
+                "orden": 3,
+                "requisitos": ['IF360']
+            }    
+        ]
+    },
+
+    {
+        "id": 13,
+        "bloque": "XIII",
+        "asignaturas": [
+            {
+                "id": "IF400",
+                "nombre": "PRÁCTICA PROFESIONAL SUPERVISADA",
+                "creditos": "",
+                "orden": 0,
+            }
         ]
     }
 ];
@@ -167,7 +528,9 @@ class PlanDeEstudio {
         asignaturaUI.classList.add("asignatura");
         asignaturaUI.setAttribute('id', `${asignatura.id}`);
         asignaturaUI.setAttribute('data-requisitos', JSON.stringify(asignatura.requisitos || []));
-        asignaturaUI.innerHTML = `<span>${asignatura.nombre}<br/>(${asignatura.id})<br> Créditos: ${asignatura.creditos}</span>`;
+        const creditosText = asignatura.creditos ? `<br> Créditos: ${asignatura.creditos}` : '';
+        
+        asignaturaUI.innerHTML = `<span>${asignatura.nombre}<br/>(${asignatura.id})${creditosText}</span>`;
         return asignaturaUI;
     }
 }
