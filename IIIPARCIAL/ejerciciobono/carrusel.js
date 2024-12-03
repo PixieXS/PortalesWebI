@@ -3,21 +3,28 @@ const images = document.querySelectorAll('.carousel-images img');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
-let currentIndex = 0;
+let currentIndex = 0; 
 
-// Función para actualizar el carrusel
+
 function updateCarousel() {
     carouselImages.style.transform = `translateX(${-currentIndex * 800}px)`;
 }
 
-// Evento para el botón "Siguiente"
+
 nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
+    if (currentIndex === 2) {
+        currentIndex = 0;
+    } else {
+        currentIndex = currentIndex + 1; 
+    }
     updateCarousel();
 });
 
-// Evento para el botón "Anterior"
 prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    if (currentIndex === 0) {
+        currentIndex = 2;
+    } else {
+        currentIndex = currentIndex - 1; 
+    }
     updateCarousel();
 });

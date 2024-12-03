@@ -91,7 +91,7 @@ const demoPlanEstudio = [
                 "nombre": "CALCULO I",
                 "creditos": 4,
                 "orden": 1,
-                "requisitos": ['MT101']
+                "requisitos": ['MT201']
             },
             {
                 "id": 'IF214',
@@ -470,6 +470,7 @@ const demoPlanEstudio = [
                 "id": "IF400",
                 "nombre": "PRÁCTICA PROFESIONAL SUPERVISADA",
                 "creditos": "",
+                "requisitosBloques": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                 "orden": 0,
             }
         ]
@@ -492,15 +493,23 @@ const demoPlanEstudio = [
 class PlanDeEstudio {
     planDeEstudio = [];
     contenedor = null;
+    currentAsignatura = null;
+
+    asignaturasRef = {};
 
     constructor(planDeEstudio, contenedorSelector = '#planDeEstudio'){
         if(planDeEstudio) {
             this.planDeEstudio = planDeEstudio;
+            this.planDeEstudio.forEach(bloque => {
+                bloque.asignaturas.forEach(asignatura => {
+                    this.asignaturasRef[asignatura.id] = {}; 
+                });
+            });
         } else {
             throw new Error("Plan de Estudio es Requerido");
         }
         this.contenedor = document.querySelector(contenedorSelector);
-
+    
         if (this.contenedor) {
             this.updateUI();
         } else {
@@ -511,10 +520,9 @@ class PlanDeEstudio {
     updateUI(){
         this.contenedor.classList.add("plan");
         this.planDeEstudio.forEach( (bloque) => {
+            console.log(`Rendering block: ${bloque.bloque}`); 
             this.contenedor.appendChild(this.generateBlockUI(bloque));
-
-
-        } );
+        });
     }
 
     generateBlockUI(bloque){
@@ -536,14 +544,76 @@ class PlanDeEstudio {
         return bloqueUI;
     }
 
-    generateAsignatura(asignatura){
+
+    generateAsignatura(asignatura) {
         const asignaturaUI = document.createElement("DIV");
         asignaturaUI.classList.add("asignatura");
         asignaturaUI.setAttribute('id', `${asignatura.id}`);
-        asignaturaUI.setAttribute('data-requisitos', JSON.stringify(asignatura.requisitos || []));
-        const creditosText = asignatura.creditos ? `<br> Créditos: ${asignatura.creditos}` : '';
-        
-        asignaturaUI.innerHTML = `<span>${asignatura.nombre}<br/>(${asignatura.id})${creditosText}</span>`;
+    
+        // Crear el contenido de la asignatura
+        let creditosTexto = asignatura.creditos ? `Créditos: ${asignatura.creditos}` : '';
+    
+        asignaturaUI.innerHTML = `<span>${asignatura.nombre}<br/>(${asignatura.id})<br> ${creditosTexto}</span>`;
+    
+        // Si la asignatura tiene requisitos
+        if (asignatura.requisitos) {
+            asignaturaUI.setAttribute('data-requisitos', JSON.stringify(asignatura.requisitos));
+            asignatura.requisitos.forEach((req) => {
+                let apertura = [];
+                if (this.asignaturasRef[req] && this.asignaturasRef[req].getAttribute) {
+                    apertura = JSON.parse(this.asignaturasRef[req].getAttribute('data-apertura') || '[]');
+                }
+    
+                if (!apertura.includes(asignatura.id)) {
+                    apertura.push(asignatura.id);
+                }
+    
+                if (apertura.length > 0 && this.asignaturasRef[req] && this.asignaturasRef[req].setAttribute) {
+                    this.asignaturasRef[req].setAttribute('data-apertura', JSON.stringify(apertura));
+                }
+            });
+        }
+    
+        // Eventos del mouse (mouseenter y mouseleave)
+        asignaturaUI.addEventListener('mouseenter', () => {
+            this.currentAsignatura = asignaturaUI;
+            this.currentAsignatura.classList.add("selected");
+            let requisitos = JSON.parse(this.currentAsignatura.dataset.requisitos || '[]');
+            let apertura = JSON.parse(this.currentAsignatura.dataset.apertura || '[]');
+    
+            requisitos.forEach((req) => {
+                if (this.asignaturasRef[req]) {
+                    this.asignaturasRef[req].classList.add('requisito');
+                }
+            });
+    
+            apertura.forEach((apt) => {
+                if (this.asignaturasRef[apt]) {
+                    this.asignaturasRef[apt].classList.add('apertura');
+                }
+            });
+        });
+    
+        asignaturaUI.addEventListener('mouseleave', () => {
+            if (this.currentAsignatura) {
+                this.currentAsignatura.classList.remove("selected");
+                let requisitos = JSON.parse(this.currentAsignatura.dataset.requisitos || '[]');
+                let apertura = JSON.parse(this.currentAsignatura.dataset.apertura || '[]');
+                requisitos.forEach((req) => {
+                    if (this.asignaturasRef[req]) {
+                        this.asignaturasRef[req].classList.remove('requisito');
+                    }
+                });
+                apertura.forEach((apt) => {
+                    if (this.asignaturasRef[apt]) {
+                        this.asignaturasRef[apt].classList.remove('apertura');
+                    }
+                });
+                this.currentAsignatura = null;
+            }
+        });
+    
+        this.asignaturasRef[asignatura.id] = asignaturaUI;
+    
         return asignaturaUI;
-    }
-}
+    }}
